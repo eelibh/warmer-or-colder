@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1SDjNIwsiyelBY8CUVM2i6DHRNIN84tw&callback=initMap"></script>
+    <title>WarmerColder</title>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div class="game-over" id="game-over-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 id="game-over-title">GAME OVER</h1>
+            <p id="game-over-text">Would you like to play again?</p>
+            <div class="play-again-btn" id="play-again">Play Again</div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="nav">
+            <div class="nav-page">
+                <p id="gamepage"> <a href="index.html"> Higher or Lower </a> </p>
+            </div>
+            <div class="nav-page">
+                <p id="about"> <a href="about.html"> About </a> </p>
+            </div>
+        </div>
+        <div class="heading">
+            <p class="title"> <span class="title-style">Higher</span><span> or Lower?</span> </p>
+            <p class="subtitle"> Does the city of <span class="nobr" id="first-city">-</span> have <strong>a Warmer
+                    or
+                    a Colder</strong> temperature than the city of <span class="nobr" id="second-city">-</span>?</p>
+        </div>
+        <div class="choices">
+            <button class="choice" id="higher">
+                <p> Warmer</p>
+            </button>
+            <button class="choice" id="lower">
+                <p> Colder</p>
+            </button>
+        </div>
+        <div class="hint-message">
+            <p> City of <span class="nobr" id="aCityExample">-</span> has a weather of <br><span class="temp">-</span>
+                °C </br>
+            </p>
+        </div>
+        <div class="user-score">
+            <p> Your score: </p>
+            <p class="score"></p>
+        </div>
+    </div>
+</body>
+
+</html>

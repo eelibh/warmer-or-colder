@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-weight: 100;
+    font-size: 1em; 
+    
+}
+body {
+    background-color:  #081114;
+}
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.1s ease;
+    padding-bottom: 0.5vh;
+    pointer-events: all;
+}
+a:hover {
+    border-bottom: 0.1vw solid #fca311;
+    color: white;
+}
+.main-container {
+    z-index: 100;
+    position: relative;
+    pointer-events: none; 
+    opacity: 0;
+    transition: opacity 4s;
+}
+.main-container.loaded {
+    opacity: 1;
+}
+.nobr { 
+    white-space: nowrap; 
+    color: #fca311; 
+    font-weight: 300;
+}
+.temp {
+    color: #fca311;
+    font-weight: 300;
+}
+.nav {
+    text-align: end;
+    font-size: 1em;
+}
+.nav-page {
+    display: inline-block;
+    padding: 1%;
+}
+.heading {
+    text-align: center;
+    font-size: 4em;
+    padding-bottom: 2.5%;
+}
+.heading > .title >.title-style {
+    color: #fca311;
+    font-weight: 300;
+}
+.heading > .subtitle {
+    text-align: center;
+    font-size: 0.3em;
+    padding: 1.5%;
+}
+.choices {
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 2.5%;
+}
+.choice {
+    width: 50%;
+    background: none;
+    user-select: none; 
+    transition: all 0.1s ease;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 2%;
+    border: 0.1vw solid white;
+    pointer-events: all;
+}
+.choice:hover {
+    border: 0.1vw solid #fca311;
+    background-color: #fca311;
+    cursor: pointer;
+}
+.hint-message {
+    text-align: center;
+    font-size: 1em;
+    padding: 2.5%;
+}
+.user-score {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+}
+.score {
+    color: #fca311;
+    font-weight: 300;
+}
+#map {
+    height: 100%;
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 12s;
+}
+#map.loaded {
+    opacity: 1;
+}
+.game-over .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.884);
+    z-index: 101;
+    display: none;
+}
+.game-over .content {
+    font-size: 2em;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    height: 25%;
+    z-index:101;
+    text-align: center;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+#game-over-title {
+    color: #fca311;
+    font-weight: 300;
+    font-size: 2em;
+}
+.game-over .play-again-btn{
+    text-align: center;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 5%;
+    border: 0.1vw solid white;
+}
+.game-over .play-again-btn:hover {
+    border: 0.1vw solid #fca311;
+    background-color: #fca311;
+    cursor: pointer;
+}
+.game-over.active .overlay{
+    display: block;
+}
+.game-over.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
